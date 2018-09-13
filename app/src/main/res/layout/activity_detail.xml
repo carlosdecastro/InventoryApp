@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".DetailActivity">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/DetailItemsLayout">
+
+                <TextView
+                    android:id="@+id/label_product_name"
+                    style="@style/DetailLabel"
+                    android:text="@string/product_name" />
+
+                <TextView
+                    android:id="@+id/product_name"
+                    style="@style/DetailValues" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/DetailItemsLayout">
+
+                <TextView
+                    android:id="@+id/label_product_price"
+                    style="@style/DetailLabel"
+                    android:text="@string/price" />
+
+                <TextView
+                    android:id="@+id/product_price"
+                    style="@style/DetailValues" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/DetailItemsLayout">
+
+                <TextView
+                    android:id="@+id/label_product_supplier_name"
+                    style="@style/DetailLabel"
+                    android:text="@string/supplier_name" />
+
+                <TextView
+                    android:id="@+id/product_supplier_name"
+                    style="@style/DetailValues" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/DetailItemsLayout"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/label_product_suplier_phone"
+                    style="@style/DetailLabel"
+                    android:text="@string/supplier_phone" />
+
+                <TextView
+                    android:id="@+id/product_supplier_phone"
+                    style="@style/DetailValues" />
+
+                <ImageButton
+                    android:id="@+id/button_call"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@android:drawable/ic_menu_call" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/label_product_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_vertical"
+                android:text="@string/quantity"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorAccent" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorAccent"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/button_add_product"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="@string/increase" />
+
+                <TextView
+                    android:id="@+id/product_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toEndOf="@id/button_add_product"
+                    android:padding="8dp"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/button_sub_product"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_toEndOf="@id/product_quantity"
+                    android:text="@string/decrease" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@android:drawable/ic_menu_edit"
+            app:backgroundTint="@color/colorPrimary" />
+
+    </RelativeLayout>
+</ScrollView>

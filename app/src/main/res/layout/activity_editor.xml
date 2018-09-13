@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".EditorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/label_product_name"
+                style="@style/DetailLabel"
+                android:text="@string/product_name" />
+
+            <EditText
+                android:id="@+id/product_name"
+                style="@style/DetailValues"
+                android:hint="@string/hint_name"
+                android:inputType="textCapWords" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/DetailItemsLayout">
+
+            <TextView
+                android:id="@+id/label_product_quantity"
+                style="@style/DetailLabel"
+                android:text="@string/quantity" />
+
+            <EditText
+                android:id="@+id/product_quantity"
+                style="@style/DetailValues"
+                android:hint="@string/hint_quantity"
+                android:inputType="numberSigned" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/DetailItemsLayout">
+
+            <TextView
+                android:id="@+id/label_product_price"
+                style="@style/DetailLabel"
+                android:text="@string/price" />
+
+            <EditText
+                android:id="@+id/product_price"
+                style="@style/DetailValues"
+                android:hint="@string/hint_price"
+                android:inputType="numberDecimal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/label_product_supplier_name"
+                style="@style/DetailLabel"
+                android:text="@string/supplier_info" />
+
+            <!-- Input fields -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:paddingEnd="4dp"
+                android:paddingStart="4dp">
+
+                <EditText
+                    android:id="@+id/product_supplier_name"
+                    style="@style/EditorField"
+                    android:hint="@string/hint_supplier_name"
+                    android:inputType="textCapWords" />
+
+                <EditText
+                    android:id="@+id/product_supplier_phone"
+                    style="@style/EditorField"
+                    android:hint="@string/hint_supplier_telephone"
+                    android:inputType="phone" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

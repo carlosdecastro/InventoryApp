@@ -1,9 +1,10 @@
 package com.example.android.inventoryapp.data;
+
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.android.inventoryapp.data.ProductContract.*;
+import com.example.android.inventoryapp.data.ProductContract.ProductEntry;
 
 public class ProductDbHelper extends SQLiteOpenHelper {
 
@@ -15,7 +16,7 @@ public class ProductDbHelper extends SQLiteOpenHelper {
             "CREATE TABLE " + ProductEntry.TABLE_NAME + " (" +
                     ProductEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                     ProductEntry.COLUMN_PRODUCT_NAME + " TEXT NOT NULL," +
-                    ProductEntry.COLUMN_PRODUCT_PRICE + " INTEGER NOT NULL," +
+                    ProductEntry.COLUMN_PRODUCT_PRICE + " REAL NOT NULL," +
                     ProductEntry.COLUMN_PRODUCT_QUANTITY + " INTEGER NOT NULL," +
                     ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME + " TEXT NOT NULL," +
                     ProductEntry.COLUMN_PRODUCT_SUPPLIER_PHONE_NUMBER + " INTEGER NOT NULL)";
